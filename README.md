@@ -1,4 +1,4 @@
-# Book
+# Solutions implemented in C language
 
 ## Author: 
 Mihai Oltean
@@ -7,7 +7,8 @@ Mihai Oltean
 Proiectarea și implementarea algoritmilor
 
 ## English title:
-Solutions implemented in C language
+The design and the implementation of Algorithms
+
 
 ## Publication coordinates:
 Computer Libris Agora, Cluj Napoca, ISBN: 973-97534-0-x, 2000 (in Romanian), 287 pages.
