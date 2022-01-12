@@ -1,4 +1,4 @@
-# Solutions implemented in C language
+# Solutions from book implemented in the C language
 
 ## Author: 
 Mihai Oltean
