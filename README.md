@@ -6,7 +6,7 @@ Mihai Oltean
 ## Title:
 Proiectarea și implementarea algoritmilor
 
-##English title:
+## English title:
 Solutions implemented in C language
 
 ## Publication coordinates:
