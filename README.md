@@ -6,7 +6,7 @@ Mihai Oltean
 ## Book title:
 Proiectarea și implementarea algoritmilor
 
-## Book title (English language):
+## Book title (English):
 The design and the implementation of Algorithms
 
 
