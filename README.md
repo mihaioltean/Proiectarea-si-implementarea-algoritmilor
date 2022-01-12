@@ -3,10 +3,10 @@
 ## Author: 
 Mihai Oltean
 
-## Title:
+## Book title:
 Proiectarea și implementarea algoritmilor
 
-## English title:
+## Book title (English language):
 The design and the implementation of Algorithms
 
 
