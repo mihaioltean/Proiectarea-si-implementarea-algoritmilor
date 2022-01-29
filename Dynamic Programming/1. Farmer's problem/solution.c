@@ -4,6 +4,7 @@
 // Website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Solutions in C:	https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
+// version 2022.01.29.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
@@ -12,27 +13,21 @@
 // ----------------------------------------------------------------
 int read_from_file(const char* file_name, int *num_corn, int* distance, int *coordinates)
 {
+	// assume file is OK
 	FILE*f = fopen(file_name, "r");
 
 	if (!f)
-		return 1;
+		return 0;
 
-	if (!fscanf(f, "%d", num_corn))
-		return 2;
-
-	if (*num_corn > MaxN || *num_corn < 1)
-		return 3;
-
-	if (!fscanf(f, "%d", distance))
-		return 2;
+	fscanf(f, "%d", num_corn);
+	fscanf(f, "%d", distance);
 
 	for (int i = 0; i < *num_corn; i++)
-		if (!fscanf(f, "%d", &coordinates[i]))
-			return 2;
+		fscanf(f, "%d", &coordinates[i]);
 
 	fclose(f);
 
-	return 0;
+	return 1;
 }
 // ----------------------------------------------------------------
 void solve(int* coordinates, int num_corn, int x, int* dp_array, int* positions)
@@ -66,21 +61,8 @@ int main(void)
 	char file_name[1000];
 	strcpy(file_name, "c:/Mihai/work/Carti/Proiectarea-si-implementarea-algoritmilor/Dynamic Programming/1. Farmer's problem/test1.in");
 
-	int read_result = read_from_file(file_name, &num_corn, &distance, coordinates);
-
-	switch (read_result){
-		case 1:
-			printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name);
-		break;
-		case 2:
-			printf("The file does not contain correct data.\n");
-		break;
-		case 3:
-			printf("Data outside of the defined interval.\n");
-		break;
-	}
-
-	if (read_result) {
+	if (!read_from_file(file_name, &num_corn, &distance, coordinates)){
+		printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name);
 		printf("Press Enter.");
 		getchar();
 		return 1;
@@ -91,11 +73,11 @@ int main(void)
 
 	solve(coordinates, num_corn, distance, dp_array, positions);
 	printf("Number of remaining corn : %d\n", dp_array[0]);
-	printf("The indecses of the remaining corn are: ");
+	printf("The indexes of the remaining corn are: ");
 	restore(0, positions);
 	printf("\n");
 
-	printf("Press Enter.");
+	printf("Done. Press Enter.");
 	getchar();
 	return 0;
 }
