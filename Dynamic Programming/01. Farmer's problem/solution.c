@@ -68,7 +68,6 @@ int save_solution_to_file(const char* file_name, int num_remaining_corn, int* re
 		return 0;
 
 	fprintf(f, "%d\n", num_remaining_corn); // Number of remaining corn
-	//printf("The indexes of the remaining corn are: ");
 	for (int i = 0; i < num_remaining_corn; i++)
 		fprintf(f, "%d ", remaining_corn[i]);
 	fclose(f);
@@ -106,7 +105,7 @@ int main(void)
 		return 1;
 	}
 
-	printf("Done. Results have been written to file. Press Enter.");
+	printf("Done.\nResults have been written to %s.\nPress Enter.\n", file_name_output);
 	getchar();
 
 	return 0;
