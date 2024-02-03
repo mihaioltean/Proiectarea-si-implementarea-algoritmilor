@@ -4,7 +4,7 @@
 // Website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Solutions in C:	https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2022.02.06.0
+// version 2024.02.03.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
@@ -16,7 +16,9 @@ struct t_apple {
     int weight, height;
 };
 // ----------------------------------------------------------------
-int read_from_file(const char* file_name, int* num_apples, int* lift_height, int* harvester_max_height, struct t_apple* apples)
+int read_from_file(const char* file_name, 
+        int* num_apples, int* lift_height, 
+        int* harvester_max_height, struct t_apple* apples)
 {
     // assume file is OK
     FILE* f = fopen(file_name, "r");
@@ -51,8 +53,10 @@ void restore_solution(int position_harvested_apple, int *k, struct t_apple * app
     }
 }
 // ----------------------------------------------------------------
-void solve(int num_apples, struct t_apple* apples, int lift_height, int harvester_max_height,
-            int* max_harvested_weight, int* harvested_apples, int* num_harvested_apples)
+void solve(int num_apples, struct t_apple* apples, 
+        int lift_height, int harvester_max_height,
+        int* max_harvested_weight, 
+        int* harvested_apples, int* num_harvested_apples)
 {
     int DP_array_harvested_apples_weight[MaxN];
     int DP_array_num_harvested_apples[MaxN];
@@ -83,7 +87,10 @@ void solve(int num_apples, struct t_apple* apples, int lift_height, int harveste
     restore_solution(max_position_harvested_apple, num_harvested_apples, apples, predecesor, harvested_apples);
 }
 // ----------------------------------------------------------------
-int save_solution_to_file(const char* file_name, int max_harvested_weight, int num_harvested_apples, int *harvested_apples, struct t_apple* apples)
+int save_solution_to_file(const char* file_name, 
+    int max_harvested_weight, 
+    int num_harvested_apples, int *harvested_apples, 
+    struct t_apple* apples)
 {
     // assume file is OK
     FILE* f = fopen(file_name, "w");
@@ -99,7 +106,6 @@ int save_solution_to_file(const char* file_name, int max_harvested_weight, int n
     return 1;
 }
 // ----------------------------------------------------------------
-
 int main(void)
 {
     struct t_apple apples[MaxN];
@@ -108,11 +114,13 @@ int main(void)
     int max_harvested_weight;
     int num_harvested_apples;
 
+	// set input and output from file name
+	char file_name_input[1000];
+	strcpy(file_name_input, "test1.in");
+	char file_name_output[1000];
+	strcpy(file_name_output, "test1.out");
 
-    // read input from file
-    char file_name_input[1000];
-    strcpy(file_name_input, "e:/books/Proiectarea-si-implementarea-algoritmilor/Dynamic Programming/18. Harvesting apples/test1.in");
-
+// read data from file
     if (!read_from_file(file_name_input, &num_apples, &lift_height, &harvester_max_height, apples)) {
         printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name_input);
         printf("Press Enter.");
@@ -120,11 +128,10 @@ int main(void)
         return 1;
     }
 
+// solve
     solve(num_apples, apples, lift_height, harvester_max_height, &max_harvested_weight, harvested_apples, &num_harvested_apples);
 
-    char file_name_output[1000];
-    strcpy(file_name_output, "c:/temp/test1.out");
-
+// save solution to file
     if (!save_solution_to_file(file_name_output, max_harvested_weight, num_harvested_apples, harvested_apples, apples)) {
         printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
         printf("Press Enter.");

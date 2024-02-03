@@ -4,7 +4,7 @@
 // Website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Solutions in C:	https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2022.01.29.1
+// version 2024.02.03.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
@@ -82,10 +82,13 @@ int main(void)
 	int num_corn;
 	int num_remaining_corn;
 
-	// read input from file
+// set input and output from file name
 	char file_name_input[1000];
-	strcpy(file_name_input, "c:/Mihai/work/Carti/Proiectarea-si-implementarea-algoritmilor/Dynamic Programming/01. Farmer's problem/test2.in");
+	strcpy(file_name_input, "test1.in");
+	char file_name_output[1000];
+	strcpy(file_name_output, "test1.out");
 
+// read input from file
 	if (!read_from_file(file_name_input, &num_corn, &distance, coordinates)){
 		printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name_input);
 		printf("Press Enter.");
@@ -93,11 +96,10 @@ int main(void)
 		return 1;
 	}
 
+// solve
 	solve(coordinates, num_corn, distance, &num_remaining_corn, remaining_corn);
-	
-	char file_name_output[1000];
-	strcpy(file_name_output, "c:/temp/test1.out");
 
+// save solution to file
 	if (!save_solution_to_file(file_name_output, num_remaining_corn, remaining_corn)) {
 		printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
 		printf("Press Enter.");
