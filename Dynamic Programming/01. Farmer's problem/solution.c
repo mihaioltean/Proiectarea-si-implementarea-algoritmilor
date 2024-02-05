@@ -1,10 +1,8 @@
-// Farmer's problem.c
-// Author: Mihai Oltean
-// Email: mihai.oltean@gmail.com
-// Website: https://mihaioltean.github.io
+// Farmer's problem
+// Author: Mihai Oltean, email: mihai.oltean@gmail.com, website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
-// Solutions in C:	https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2024.02.03.0
+// Source code: https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
+// version 2024.02.04.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
