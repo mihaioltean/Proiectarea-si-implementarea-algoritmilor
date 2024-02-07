@@ -4,7 +4,7 @@
 // Website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Solutions in C:	https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2024.02.03.0
+// version 2024.02.07.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
@@ -53,7 +53,7 @@ void restore_solution(int position_harvested_apple, int *k, struct t_apple * app
     }
 }
 // ----------------------------------------------------------------
-void solve(int num_apples, struct t_apple* apples, 
+void dynamic_programming_computations(int num_apples, struct t_apple* apples, 
         int lift_height, int harvester_max_height,
         int* max_harvested_weight, 
         int* harvested_apples, int* num_harvested_apples)
@@ -87,12 +87,11 @@ void solve(int num_apples, struct t_apple* apples,
     restore_solution(max_position_harvested_apple, num_harvested_apples, apples, predecesor, harvested_apples);
 }
 // ----------------------------------------------------------------
-int save_solution_to_file(const char* file_name, 
+int write_solution_to_file(const char* file_name, 
     int max_harvested_weight, 
     int num_harvested_apples, int *harvested_apples, 
     struct t_apple* apples)
 {
-    // assume file is OK
     FILE* f = fopen(file_name, "w");
 
     if (!f)
@@ -129,10 +128,10 @@ int main(void)
     }
 
 // solve
-    solve(num_apples, apples, lift_height, harvester_max_height, &max_harvested_weight, harvested_apples, &num_harvested_apples);
+    dynamic_programming_computations(num_apples, apples, lift_height, harvester_max_height, &max_harvested_weight, harvested_apples, &num_harvested_apples);
 
 // save solution to file
-    if (!save_solution_to_file(file_name_output, max_harvested_weight, num_harvested_apples, harvested_apples, apples)) {
+    if (!write_solution_to_file(file_name_output, max_harvested_weight, num_harvested_apples, harvested_apples, apples)) {
         printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
         printf("Press Enter.");
         getchar();

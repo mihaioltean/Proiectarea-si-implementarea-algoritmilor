@@ -1,8 +1,8 @@
-// Farmer's problem
+// 01. Farmer's problem
 // Author: Mihai Oltean, email: mihai.oltean@gmail.com, website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Source code: https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2024.02.04.0
+// version 2024.02.07.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
@@ -28,7 +28,7 @@ int read_from_file(const char* file_name, int *num_corn, int* distance, int *coo
 	return 1;
 }
 // ----------------------------------------------------------------
-void solve(int* coordinates, int num_corn, int x, int *num_remaining_corn, int* remaining_corn)
+void dynamic_programming_computations(int* coordinates, int num_corn, int x, int *num_remaining_corn, int* remaining_corn)
 {
 	int positions[MaxN];
 	int dp_array[MaxN];
@@ -57,9 +57,8 @@ void solve(int* coordinates, int num_corn, int x, int *num_remaining_corn, int* 
 	} while (p);
 }
 // ----------------------------------------------------------------
-int save_solution_to_file(const char* file_name, int num_remaining_corn, int* remaining_corn)
+int write_solution_to_file(const char* file_name, int num_remaining_corn, int* remaining_corn)
 {
-	// assume file is OK
 	FILE* f = fopen(file_name, "w");
 
 	if (!f)
@@ -95,10 +94,10 @@ int main(void)
 	}
 
 // solve
-	solve(coordinates, num_corn, distance, &num_remaining_corn, remaining_corn);
+	dynamic_programming_computations(coordinates, num_corn, distance, &num_remaining_corn, remaining_corn);
 
 // save solution to file
-	if (!save_solution_to_file(file_name_output, num_remaining_corn, remaining_corn)) {
+	if (!write_solution_to_file(file_name_output, num_remaining_corn, remaining_corn)) {
 		printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
 		printf("Press Enter.");
 		getchar();
