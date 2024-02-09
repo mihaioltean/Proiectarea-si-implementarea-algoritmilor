@@ -29,11 +29,11 @@ Each problem has its own folder which contains the following items:
 
 All programs have at least 3 functions:
 
-*read_from_file*
+- *read_from_file*
 
-*dynamic_programming_computations*
+- *dynamic_programming_computations*
 
-*write_solution_to_file*
+- *write_solution_to_file*
 
 ### Major changes
 
