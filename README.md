@@ -17,13 +17,13 @@ Computer Libris Agora, Cluj Napoca, ISBN: 973-97534-0-x, 2000 (in Romanian), 287
 
 Each problem has its own folder which contains the following items:
 
-*readme.md* - a short description of the problem and its solution
+- *readme.md* - a short description of the problem and its solution
 
-*solution.c* - the solution implemented in the *C* language.
+- *solution.c* - the solution implemented in the *C* language.
 
-*test1.in* - an input file. There could be more than one test files.
+- *test1.in* - an input file. There could be more than one test files.
 
-*expected output/test1.out* - the expected output.
+- *expected output/test1.out* - the expected output.
 
 ## Solution structure
 
