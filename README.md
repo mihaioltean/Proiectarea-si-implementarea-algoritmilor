@@ -18,8 +18,11 @@ Computer Libris Agora, Cluj Napoca, ISBN: 973-97534-0-x, 2000 (in Romanian), 287
 Each problem has its own folder which contains the following items:
 
 *readme.md* - a short description of the problem and its solution
+
 *solution.c* - the solution implemented in the *C* language.
+
 *test1.in* - an input file. There could be more than one test files.
+
 *expected output/test1.out* - the expected output.
 
 ## History
@@ -31,7 +34,7 @@ To **Clara Ionescu** (the owner of the publishing company) for the huge effor in
 
 To my sister **Mihaela Oltean** for rewriting the codes from *Pascal* to *C*.
 
-# Contact:
+## Contact:
 
 [My personal website: https://mihaioltean.github.io](https://mihaioltean.github.io)
 
