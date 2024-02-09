@@ -44,7 +44,7 @@ This book has a long and complex history which will be told here.
 
 ## Special thanks
 
-To **Clara Ionescu** (the owner of the publishing company) for the huge effor invested in preparing this book.
+To **Clara Ionescu** (the owner of the publishing company) for the huge effort invested in preparing this book.
 
 To my sister **Mihaela Oltean** for rewriting the codes from *Pascal* to *C*.
 
