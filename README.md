@@ -25,7 +25,21 @@ Each problem has its own folder which contains the following items:
 
 *expected output/test1.out* - the expected output.
 
-## History
+## Solution structure
+
+All programs have at least 3 functions:
+
+*read_from_file*
+
+*dynamic_programming_computations*
+
+*write_solution_to_file*
+
+### Major changes
+
+- All vectors are now 0-indexed. In the *Pascal* version, almost all vectors were indexed from 1. Thus, all computed and displayed positions start from 0.
+
+## Book's history
 This book has a long and complex history which will be told here.
 
 ## Special thanks
