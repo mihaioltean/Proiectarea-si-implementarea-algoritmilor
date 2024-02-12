@@ -2,14 +2,14 @@
 // Author: Mihai Oltean, email: mihai.oltean@gmail.com, website: https://mihaioltean.github.io
 // Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
 // Source code: https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
-// version 2024.02.07.0
+// version 2024.02.12.0
 // ----------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
 // ----------------------------------------------------------------
 #define MaxN 1000
 // ----------------------------------------------------------------
-int read_from_file(const char* file_name, int *num_corn, int* distance, int *coordinates)
+int read_from_file(const char* file_name, int *num_corn, int distance[MaxN], int coordinates[MaxN])
 {
 	// assume file is OK
 	FILE*f = fopen(file_name, "r");
@@ -28,7 +28,7 @@ int read_from_file(const char* file_name, int *num_corn, int* distance, int *coo
 	return 1;
 }
 // ----------------------------------------------------------------
-void dynamic_programming_computations(int* coordinates, int num_corn, int x, int *num_remaining_corn, int* remaining_corn)
+void dynamic_programming_computations(int coordinates[MaxN], int num_corn, int x, int *num_remaining_corn, int remaining_corn[MaxN])
 {
 	int positions[MaxN];
 	int dp_array[MaxN];
@@ -57,7 +57,7 @@ void dynamic_programming_computations(int* coordinates, int num_corn, int x, int
 	} while (p);
 }
 // ----------------------------------------------------------------
-int write_solution_to_file(const char* file_name, int num_remaining_corn, int* remaining_corn)
+int write_solution_to_file(const char* file_name, int num_remaining_corn, int remaining_corn[MaxN])
 {
 	FILE* f = fopen(file_name, "w");
 
