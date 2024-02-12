@@ -1,0 +1,1 @@
+The problem was generalized a bit: Initially (in the printed book) the length of the phrase was equal to the number of words in the dictionary. This constraint was removed now.
