@@ -52,6 +52,6 @@ To my sister **Mihaela Oltean** for rewriting the codes from *Pascal* to *C*.
 
 ## Contact:
 
-[My personal website: https://mihaioltean.github.io](https://mihaioltean.github.io)
+My personal website: [https://mihaioltean.github.io](https://mihaioltean.github.io)
 
 email: mihai.oltean@gmail.com
