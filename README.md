@@ -39,7 +39,7 @@ All programs have at least 3 functions:
 
 ### Major changes
 
-- All vectors are now 0-indexed. In the *Pascal* version, almost all vectors were indexed from 1. Thus, all computed and displayed positions start from 0.
+- All vectors are now 0-indexed. In the *Pascal* version, most vectors were indexed from 1. Thus, now all computed and displayed positions start from 0.
 
 ## Book's history
 This book has a long and complex history which will be told here.
