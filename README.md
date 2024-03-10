@@ -3,17 +3,21 @@
 
 Solutions from book implemented in the *C* language.
 
-## Author: 
+## Author
+
 Mihai Oltean
 
-## Book title (in Romanian):
+## Book title (in Romanian)
+
 Proiectarea și implementarea algoritmilor
 
-## Book title (English):
+## Book title (English)
+
 The design and the implementation of algorithms
 
-## Publication coordinates:
-Computer Libris Agora, Cluj Napoca, ISBN: 973-97534-0-x, 2000 (in Romanian), 287 pages.
+## Publication coordinates
+
+Oltean Mihai, __Proiectarea și implementarea algoritmilor__, Computer Libris Agora, Cluj-Napoca, 287 pages, 2000, ISBN: 973-97534-0-x, (in Romanian).
 
 ## Repository structure
 
@@ -42,6 +46,7 @@ All programs have at least 3 functions:
 - All vectors are now 0-indexed. In the *Pascal* version, most vectors were indexed from 1. Thus, now all computed and displayed positions start from 0.
 
 ## Book's history
+
 This book has a long and complex history which will be told here.
 
 ## Special thanks
@@ -50,8 +55,12 @@ To **Clara Ionescu** (the owner of the publishing company) for the huge effort i
 
 To my sister **Mihaela Oltean** for rewriting the codes from *Pascal* to *C*.
 
-## Contact:
+## References
 
-My personal website: [https://mihaioltean.github.io](https://mihaioltean.github.io)
+[References](references.md)
+
+## Contact
 
 email: mihai.oltean@gmail.com
+
+My personal website: [https://mihaioltean.github.io](https://mihaioltean.github.io)
