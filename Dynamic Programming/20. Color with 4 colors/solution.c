@@ -93,27 +93,27 @@ int main(void)
     strcpy(file_name_output, "test1.out");
 
 // read input from file
-	if (!read_from_file(file_name_input, &n, a, connections)){
-		printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name_input);
-		printf("Press Enter.");
-		getchar();
-		return 1;
-	}
+    if (!read_from_file(file_name_input, &n, a, connections)){
+        printf("Cannot find input file (%s). Please specify the correct filename and path.\n", file_name_input);
+        printf("Press Enter.");
+        getchar();
+        return 1;
+	  }
 
-  // solve
-	dynamic_programming_computations(n, a, connections);
+// solve
+    dynamic_programming_computations(n, a, connections);
         
-    // save solution to file
-	if (!write_solution_to_file(file_name_output, a, n)) {
-		printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
-		printf("Press Enter.");
-		getchar();
-		return 1;
-	}
+// save solution to file
+    if (!write_solution_to_file(file_name_output, a, n)) {
+		    printf("Cannot write to output file (%s). Please specify the correct filename and path.\n", file_name_output);
+		    printf("Press Enter.");
+		    getchar();
+		    return 1;
+	  }
 
-	printf("Done.\nResults have been written to %s.\nPress Enter.\n", file_name_output);
-	getchar();
+    printf("Done.\nResults have been written to %s.\nPress Enter.\n", file_name_output);
+    getchar();
 
-	return 0;
+    return 0;
 } 
 // ----------------------------------------------------------------
