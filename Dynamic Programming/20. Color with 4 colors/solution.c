@@ -1,6 +1,10 @@
+// 20. Color with 4 colors
+// Author: Mihai Oltean, email: mihai.oltean@gmail.com, website: https://mihaioltean.github.io
+// Book: Mihai Oltean, Proiectarea si implementarea algoritmilor (The design and the implementation of Algorithms), Computer Libris Agora, Cluj-Napoca, 287 pages, ISBN: 973-97534-0-x, 2000 (in romanian)
+// Source code: https://github.com/mihaioltean/Proiectarea-si-implementarea-algoritmilor
+// version 2024.02.17.0
+// ----------------------------------------------------------------
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include <string.h>
 // ----------------------------------------------------------------
 #define MaxN 200
