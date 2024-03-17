@@ -8,7 +8,7 @@ Oltean Mihai, __Proiectarea și implementarea algoritmilor__, Computer Libris Ag
 
 2. *: Culegere de probleme (Algoritmică, baze de date, mediul Windows, Microsoft Word și DOS), Editura Libris, Cluj-Napoca, 1998.
 
-3. Bellman Richard, Dreyfus Stuart: Programarea dinamică în aplicații, Editura Tehnică, București, 1967.
+3. Bellman Richard, Dreyfus Stuart: [Programarea dinamică în aplicații](https://press.princeton.edu/books/hardcover/9780691651873/applied-dynamic-programming), Editura Tehnică, București, 1967 (traducere).
 
 4. Knuth Donald: [The art of computer programming. Vol. 1: Fundamental Algorithms](https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming), Addison Wesley, Reading, Mass, 1968.
 
