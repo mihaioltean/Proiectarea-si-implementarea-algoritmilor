@@ -40,7 +40,7 @@ Oltean Mihai, __Proiectarea și implementarea algoritmilor__, Computer Libris Ag
 
 18. Andonie Răzvan, Gârbacea Ilie: Algoritmi fundamentali, O perspectivă C++. Editura Libris, Cluj-Napoca, 1995.
 
-19. Richard Bellman: [Dynamic Programming](https://www.amazon.com/Dynamic-Programming-Dover-Computer-Science/dp/0486428095), Princeton University Press, Princeton, New Jersey, 1957.
+19. Bellman Richard: [Dynamic Programming](https://www.amazon.com/Dynamic-Programming-Dover-Computer-Science/dp/0486428095), Princeton University Press, Princeton, New Jersey, 1957.
 
 20. Oltean Mihai: Programare automată, Lucrare de diplomă, îndrumător prof. univ. M. Frenţiu, Universitatea Babeş-Bolyai, Cluj-Napoca, 1999.
 
